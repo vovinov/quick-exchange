@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/quick-exchange/static/css/main.93af0fd9.chunk.css",
+    "main.js": "/quick-exchange/static/js/main.20abedd1.chunk.js",
+    "main.js.map": "/quick-exchange/static/js/main.20abedd1.chunk.js.map",
+    "runtime-main.js": "/quick-exchange/static/js/runtime-main.c855060c.js",
+    "runtime-main.js.map": "/quick-exchange/static/js/runtime-main.c855060c.js.map",
+    "static/js/2.85f1d1ff.chunk.js": "/quick-exchange/static/js/2.85f1d1ff.chunk.js",
+    "static/js/2.85f1d1ff.chunk.js.map": "/quick-exchange/static/js/2.85f1d1ff.chunk.js.map",
+    "index.html": "/quick-exchange/index.html",
+    "precache-manifest.e585ec0a7b149db1ecd03dd98acd90c4.js": "/quick-exchange/precache-manifest.e585ec0a7b149db1ecd03dd98acd90c4.js",
+    "service-worker.js": "/quick-exchange/service-worker.js",
+    "static/css/main.93af0fd9.chunk.css.map": "/quick-exchange/static/css/main.93af0fd9.chunk.css.map",
+    "static/js/2.85f1d1ff.chunk.js.LICENSE": "/quick-exchange/static/js/2.85f1d1ff.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c855060c.js",
+    "static/js/2.85f1d1ff.chunk.js",
+    "static/css/main.93af0fd9.chunk.css",
+    "static/js/main.20abedd1.chunk.js"
+  ]
+}
