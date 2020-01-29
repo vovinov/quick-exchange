@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './button.css'
 
-export default class Button extends Component {
+const Button = ({ isButtonDisabled, onButtonClick }) => {    
 
-    render() {
-
-        const clazz = ['btn', 'btn-primary', 'exchange__button', 'align-self-end', 'col-md-3']
-        
-        if (this.props.isButtonDisabled) {
-            clazz.push('disabled')
-        }
-        
-        const classList = clazz.join(' ')
-       
-        return (
-            <button 
-                onClick={this.props.onButtonClick}
-                className={classList}>
-                    Результат
-            </button>
-        );
+    const classArray = ['btn', 'btn-primary', 'exchange__button', 'align-self-end', 'col-md-3'];
+            
+    if (isButtonDisabled) {
+        classArray.push('disabled')
     }
+    
+    const classList = classArray.join(' ');
+
+    return (
+        <button 
+            onClick={onButtonClick}
+            className={classList}>
+                Результат
+        </button>  
+    )
 }
+
+export default Button
 

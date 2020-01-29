@@ -125,16 +125,21 @@ export default class App extends Component {
     }
 
     onButtonClick = async (e) => {
+
+        const {amount, fromValue, toValue} = this.state
+
         e.preventDefault();
-        const value = await this.api.getValue(this.state.amount, this.state.fromValue, this.state.toValue);
-        const temp = await value * this.state.amount        
+        const value = await this.api.getValue(amount, fromValue, toValue);
+        const temp = await value * amount        
         this.setState({
             result: temp.toFixed(3),
             isShowResult: true
         });     
     }     
 
-    render() {         
+    render() {      
+        
+        const { result, isShowResult, toValue, isButtonDisabled } = this.state
         
         return (
             <div>
@@ -146,11 +151,11 @@ export default class App extends Component {
                         onFirstSelectChange={this.onFirstSelectChange}
                         onSecondSelectChange={this.onSecondSelectChange}
                         onAmountChange={this.onAmountChange} 
-                        isButtonDisabled={this.state.isButtonDisabled} />
+                        isButtonDisabled={isButtonDisabled} />
                     <Result 
-                        value={this.state.result}
-                        toValue={this.state.toValue} 
-                        onShowResult={this.state.isShowResult} />                                
+                        value={result}
+                        toValue={toValue} 
+                        onShowResult={isShowResult} />                                
                 </div>                
             </div>
         );

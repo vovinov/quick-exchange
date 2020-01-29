@@ -1,28 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import './result.css';
 
-export default class Result extends Component {
-
+const Result = ({ value, toValue, onShowResult }) => {       
         
-    render() {       
-        
-        const { value, toValue, onShowResult } = this.props
-
-        if (onShowResult) {
-            return (
-                <div className="exchange__result">
-                    <p>{`${value} ${toValue}`}</p>
-                </div>
-            );
-        }
-
+    if (onShowResult) {
         return (
             <div className="exchange__result">
-
+                <p>{`${value} ${toValue}`}</p>
             </div>
-        )
+        );
     }
+
+    return (
+        <div className="exchange__result">
+
+        </div>
+    )
+    
 }
+
+export default Result
 
 

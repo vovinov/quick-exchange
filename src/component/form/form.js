@@ -16,8 +16,7 @@ export default class form extends Component {
         error: false
     }
 
-    constructor() {
-        super()
+    componentDidMount() {        
         this.getOptionsList()
     }
 
@@ -40,12 +39,16 @@ export default class form extends Component {
    
     render() {
 
-        if (this.state.error) {return <ErrorMessage label={'API ERROR'}/>}
+        const {error, loading, array } = this.state;
+
+        const { onAmountChange, onFirstSelectChange, onSecondSelectChange, onButtonClick, isButtonDisabled } = this.props;
+
+        if (error) {return <ErrorMessage label={'API ERROR'}/>}
         
-        if (this.state.loading) {return <Loader />}
+        if (loading) {return <Loader />}
 
 
-        const optionsList = this.state.array.map((item) => {
+        const optionsList = array.map((item) => {
             return <Option 
                     key={ item }
                     value={ item } />
@@ -58,7 +61,7 @@ export default class form extends Component {
                         <div className="d-flex flex-column">
                             <label htmlFor="amount">Amount</label>
                             <input  required type="number" className="form-control" id="amount"
-                                    onChange={this.props.onAmountChange}>                            
+                                    onChange={onAmountChange}>                            
                             </input>
                         </div>
                     </div>
@@ -67,7 +70,7 @@ export default class form extends Component {
                             <label className="my-1 mr-2" htmlFor="select1">From</label>
                             <select className="custom-select mr-sm-2" 
                                     id="select1"
-                                    onChange={this.props.onFirstSelectChange}>                            
+                                    onChange={onFirstSelectChange}>                            
                                 { optionsList }
                             </select>
                         </div>
@@ -77,14 +80,14 @@ export default class form extends Component {
                             <label className="my-1 mr-2" htmlFor="select2">To</label>
                             <select className="custom-select mr-sm-2" 
                                     id="select2"
-                                    onChange={this.props.onSecondSelectChange}>
+                                    onChange={onSecondSelectChange}>
                                 { optionsList }  
                             </select>
                         </div>
                     </div>                
                     <Button 
-                        onButtonClick={this.props.onButtonClick}
-                        isButtonDisabled={this.props.isButtonDisabled}/>                   
+                        onButtonClick={onButtonClick}
+                        isButtonDisabled={isButtonDisabled}/>                   
                 </div>                       
             </form> 
         );

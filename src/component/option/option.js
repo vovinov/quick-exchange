@@ -3,12 +3,10 @@ import React from 'react';
 import './option.css'
 
 
-const Option = (props) => {
-    
-    const { value } = props
-    
+const Option = ({ value }) => {
+            
     return (
-    <option value={ value }>{ value }</option>
+        <option value={ value }>{ value }</option>
     );
 
 }
