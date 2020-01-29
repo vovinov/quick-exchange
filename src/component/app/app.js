@@ -3,6 +3,8 @@ import Header from '../header/';
 import Form from '../form';
 import Result from '../result';
 
+import './app.css';
+
 
 import apiService from '../../services/apiService'
 
