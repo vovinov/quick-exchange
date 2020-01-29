@@ -1,0 +1,9 @@
+.exchange__button {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+button.disabled {
+    opacity: 0.40; 
+    cursor: not-allowed;
+}

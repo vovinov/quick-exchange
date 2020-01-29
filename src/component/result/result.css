@@ -1,0 +1,9 @@
+.exchange__result {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 10vh;
+    font-size: 60px;
+    color: red;
+}
